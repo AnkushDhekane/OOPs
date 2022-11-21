@@ -1,0 +1,22 @@
+from abc import *
+
+class School(ABC):#class schoool is abstract class
+    @abstractmethod  # decorater to create abstract method
+    def play(self): #with atleast having one minimum abstract method
+        print("ready to play")
+    def study(self):
+        print("study hard")
+
+
+
+Another file:
+
+
+from abstr import *
+class Svpm(School):#child class inherit school
+    def play(self):
+        print("playyy")#must implement/define abstract method in child class
+
+s=Svpm()#object creating
+s.play()#call to abstract method
+s.study()#can call non abstact method without defining it here
