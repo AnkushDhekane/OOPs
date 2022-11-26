@@ -1,0 +1,50 @@
+'''
+#method overloading is not allowed in python, 
+but we can achieve method overloading in following ways
+
+def add(*args):
+    if len(args)==3:
+        print(sum(args))
+    elif len(args)==2:
+        print(args[0]*args[1])
+    elif len(args)==1:
+        print("only one argument")
+    else:
+        print("no argument")
+add(23,44,55)
+add(2233)
+add()
+add(56,789,123,567)
+=====================================
+def add(**kwargs):
+    if len(kwargs)==3:
+        print(sum(kwargs.values()))
+    elif len(kwargs)==2:
+        print(max(kwargs.values()))
+    elif len(kwargs)==1:
+        print("only one argument")
+    else:
+        print("no argument")
+add(a=23,b=44,c=55)
+add(x=2233,f=67)
+add()
+add(c=56,n=789,d=123,y=567)
+'''
+========================================
+def add(a=None,b=None,c=None):
+    if(a!=None and b!=None and c!=None):
+        print(a+b+c)
+    elif (a != None and b != None and c == None):
+            print(a*b)
+    elif (a != None and b == None and c == None):
+        print("only one argument")
+    else:
+        print("no argument")
+add(23,44,55)
+add(2233,67)
+add(12)
+add(56,789,123)
+
+
+
+
